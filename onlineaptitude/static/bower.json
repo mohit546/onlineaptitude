@@ -1,0 +1,16 @@
+{
+  "name": "mohit patil",
+  "version": "0.0.0",
+  "homepage": "https://github.com/ram546/onlineaptitude",
+  "authors": [
+    "Mohit Patil <bravoure546@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
