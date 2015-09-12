@@ -14,6 +14,16 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "~3.3.5"
+    "bootstrap": "~3.3.5",
+    "angular": "latest",
+    "angular-bootstrap": "~0.13.3",
+    "angular-google-maps": "~2.1.6",
+    "angular-route": "latest",
+    "angular-ui-notification": "~0.0.14",
+    "angular-ui-router": "~0.2.15",
+    "animate.css": "latest",
+    "bootstrap": "latest",
+    "font-awesome": "latest",
+    "ngmap": "~1.13.4"
   }
 }
