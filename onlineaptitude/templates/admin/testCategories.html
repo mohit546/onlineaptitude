@@ -1,12 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <base href="/">
-    <title>Online Aptitude</title>
-
-    <!-- // <script src='//maps.googleapis.com/maps/api/js?sensor=false'></script> -->
-   <!-- CSS -->
-    <link rel="stylesheet" href="/home/ram/onlineaptitude/onlineaptitude/static/bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<title></title>
+	  <link rel="stylesheet" href="/home/ram/onlineaptitude/onlineaptitude/static/bower_components/bootstrap/dist/css/bootstrap.min.css">
 
     <!-- JS -->
     <script src="/home/ram/onlineaptitude/onlineaptitude/static/bower_components/jquery/dist/jquery.js "></script>
@@ -14,20 +10,16 @@
     <script src="/home/ram/onlineaptitude/onlineaptitude/static/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="/home/ram/onlineaptitude/onlineaptitude/static/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="/home/ram/onlineaptitude/onlineaptitude/static/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
-    <!-- // <script src="/static/bower_components/ngmap/build/scripts/ng-map.min.js"></script> -->
-
-
-    <!-- <script src='/static/libs/angular-google-maps/dist/lodash.min.js'></script> -->
-    <!-- <script src='/static/libs/angular-google-maps/dist/angular-google-maps.min.js'></script> -->
-
-    <!-- ANGULAR CUSTOM -->
-    <!-- // <script src="/static/js/services.js"></script> -->
-    <script src="/home/ram/onlineaptitude/onlineaptitude/static/js/controllers.js"></script>
-    <script src="/home/ram/onlineaptitude/onlineaptitude/static/js/app.js"></script>
-
+    <style type="text/css">
+		.mainList {
+			color:#5EAC1A;
+		}
+		.subList {
+			color:#269BC6;
+		}
+    </style>
 </head>
-<body ng-app="TrackingApp"  ng-controller="MasterCtrl">
-
+<body>
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -81,9 +73,107 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-
-<!-- ANGULAR DYNAMIC CONTENT -->
-  <!-- <div ui-view ></div> -->
-
+<div class="row">
+	<div class="col-sm-4">
+		<ol class="mainList">
+		<li>General Aptitude</li>
+			<ol type="a" class="subList">
+				<li>Arithmetic Aptitude</li>
+				<li>Data Interpretation</li>
+				<li>Online Aptitude Test</li>
+				<li>Data Interpretation Test</li>
+			</ol>
+		<li>Online Tests</li>
+			<ol type="a" class="subList">
+				<li>Aptitude Test</li>
+				<li>Verbal Ability Test</li>
+				<li>Logical Reasoning Test</li>
+				<li>C Programming Test</li>
+				<li>Java Programming Test</li>
+				<li>Read more...</li>
+			</ol>
+		<li>Programming</li>
+			<ol type="a" class="subList">
+				<li>C Programming</li>
+				<li>C++ Programming</li>
+				<li>C# Programming</li>
+				<li>Java Programming</li>
+			</ol>
+		<li>Puzzles</li>
+			<ol type="a" class="subList">
+				<li>Sudoku</li>
+				<li>Number puzzles</li>
+				<li>Missing letters puzzles</li>
+				<li>Logical puzzles</li>
+				<li>Clock puzzles</li>
+			</ol>
+		<li>Technical Interview - Short Answers</li>
+			<ol type="a" class="subList">
+				<li>Software Testing</li>
+				<li>Data Structures</li>
+				<li>The C Language Basics</li>
+				<li>SQL Server</li>
+				<li>Networking</li>
+				<li>Core Java</li>
+				<li>Read more...</li>
+			</ol>
+		</ol>
+	</div>
+	<div class="col-sm-4">
+		<ol class="mainList">
+		<li>Medical / Science</li>
+			<ol type="a" class="subList">
+				<li>Microbiology</li>
+				<li>Biochemistry</li>
+				<li>Biotechnology</li>
+				<li>Biochemical Engineering</li>
+			</ol>
+		<li>Verbal and Reasoning</li>
+			<ol type="a" class="subList">
+				<li>Verbal Ability</li>
+				<li>Logical Reasoning</li>
+				<li>Verbal Reasoning</li>
+				<li>Non Verbal Reasoning</li>
+			</ol>
+		<li>Interview</li>
+			<ol type="a" class="subList">
+				<li>Placement Papers</li>
+				<li>Group Discussion</li>
+				<li>HR Interview</li>
+				<li>Technical Interview</li>
+				<li>Body Language</li>
+				<li>Read more...</li>
+			</ol>
+		<li>General Knowledge</li>
+			<ol type="a" class="subList">
+				<li>Basic General Knowledge</li>
+				<li>General Science</li>
+				<li>Inventions</li>
+				<li>World Geography</li>
+				<li>Read more...</li>
+			</ol>
+		<li>Engineering</li>
+			<ol type="a" class="subList">
+				<li>Networking Questions</li>
+				<li>Database Questions</li>
+				<li>Basic Electronics</li>
+				<li>Digital Electronics</li>
+				<li>Electrical Engineering</li>
+				<li>Read more...</li>
+			</ol>
+		</ol>
+	</div>
+	<div class="col-sm-4">
+		<ol class="mainList">
+		<li>New Sections</li>
+			<ol type="a" class="subList">
+				<li>ECE Questions and Answers</li>
+				<li>Civil Engineering</li>
+				<li>Mechanical Engineering</li>
+				<li>Data Structures, Marketing etc.</li>
+			</ol>
+		</ol>
+	</div>
+</div>
 </body>
 </html>

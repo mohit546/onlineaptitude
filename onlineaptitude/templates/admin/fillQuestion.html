@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <base href="/">
+    <title>Online Aptitude</title>
+
+    <!-- // <script src='//maps.googleapis.com/maps/api/js?sensor=false'></script> -->
+   <!-- CSS -->
+    <link rel="stylesheet" href="/home/ram/onlineaptitude/onlineaptitude/static/bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+    <!-- JS -->
+    <script src="/home/ram/onlineaptitude/onlineaptitude/static/bower_components/jquery/dist/jquery.js "></script>
+    <script src="/home/ram/onlineaptitude/onlineaptitude/static/bower_components/angular/angular.min.js"></script>
+    <script src="/home/ram/onlineaptitude/onlineaptitude/static/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="/home/ram/onlineaptitude/onlineaptitude/static/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/home/ram/onlineaptitude/onlineaptitude/static/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <!-- // <script src="/static/bower_components/ngmap/build/scripts/ng-map.min.js"></script> -->
+
+
+    <!-- <script src='/static/libs/angular-google-maps/dist/lodash.min.js'></script> -->
+    <!-- <script src='/static/libs/angular-google-maps/dist/angular-google-maps.min.js'></script> -->
+
+    <!-- ANGULAR CUSTOM -->
+    <!-- // <script src="/static/js/services.js"></script> -->
+    <!-- // <script src="/home/ram/onlineaptitude/onlineaptitude/static/js/controllers.js"></script> -->
+    <!-- // <script src="/home/ram/onlineaptitude/onlineaptitude/static/js/app.js"></script> -->
+
+</head>
+<!-- <body ng-app="TrackingApp"  ng-controller="MasterCtrl"> -->
+<body onload="fillCategory();">
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Brand</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div class="row">
+  <div class="col-sm-3">
+   <!--  <form name="drop_list" action="mainck.php" method="POST">
+        <select class="form-control" NAME="Category" onChange="SelectSubCat();" >
+            <Option value="">Category</option>
+        </select>&nbsp;
+
+        <select class="form-control" id="SubCat" NAME="SubCat">
+            <Option value="">SubCat</option>
+        </select>
+    </form> -->
+  </div>
+  <div class="col-sm-6">
+    <div class="row" style="margin-top:50px;">
+      <label for="questionField">Enter Question</label>
+      <textarea id="questionField" class="form-control"></textarea>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <label for="anserwerFieldOne" style="margin-top:30px;">A:</label>
+            <input type="text" class="form-control" id="anserwerFieldOne" style="width:40%; display:inline;"><br/>
+
+            <label for="anserwerFieldTwo" style="margin-top:30px;">B:</label>
+            <input type="text" class="form-control" id="anserwerFieldTwo" style="width:40%; display:inline;"><br/>
+
+
+            <label for="anserwerFieldThree" style="margin-top:30px;">C:</label>
+            <input type="text" class="form-control" id="anserwerFieldThree" style="width:40%; display:inline;"><br/>
+
+            <label for="anserwerFieldFour" style="margin-top:30px;">D:</label>
+            <input type="text" class="form-control" id="anserwerFieldFour" style="width:40%; display:inline;"><br/>
+        </div>
+        <div class="col-sm-6">
+            <label for="answerField" style="margin-top:30%;">Answer:</label>
+            <input type="text" class="form-control" style="width:40%;"><br/>
+        </div>
+    </div>
+    <div class="row">
+        <button class="btn btn-primary form-control" style="margin-top:30px; width:50%;">Submit</button>
+    </div>
+
+  </div>
+  <div class="col-sm-3"></div>
+</div>
+
+
+</body>
+<script>
+// function fillCategory(){
+// addOption(document.drop_list.Category, "Fruits", "Fruits", "");
+// addOption(document.drop_list.Category, "Games", "Games", "");
+// addOption(document.drop_list.Category, "Scripts", "Scripts", "");
+// }
+
+// function SelectSubCat(){
+
+// removeAllOptions(document.drop_list.SubCat);
+// addOption(document.drop_list.SubCat, "", "SubCat", "");
+
+// if(document.drop_list.Category.value == 'Fruits'){
+// addOption(document.drop_list.SubCat,"Mango", "Mango");
+// addOption(document.drop_list.SubCat,"Banana", "Banana");
+// addOption(document.drop_list.SubCat,"Orange", "Orange");
+// }
+// if(document.drop_list.Category.value == 'Games'){
+// addOption(document.drop_list.SubCat,"Cricket", "Cricket");
+// addOption(document.drop_list.SubCat,"Football", "Football");
+// addOption(document.drop_list.SubCat,"Polo", "Polo", "");
+// }
+// if(document.drop_list.Category.value == 'Scripts'){
+// addOption(document.drop_list.SubCat,"PHP", "PHP");
+// addOption(document.drop_list.SubCat,"ASP", "ASP");
+// addOption(document.drop_list.SubCat,"Perl", "Perl");
+// }
+
+// }
+
+
+// function removeAllOptions(selectbox)
+// {
+//     var i;
+//     for(i=selectbox.options.length-1;i>=0;i--)
+//     {
+//         selectbox.remove(i);
+//     }
+// }
+
+
+// function addOption(selectbox, value, text )
+// {
+//     var optn = document.createElement("OPTION");
+//     optn.text = text;
+//     optn.value = value;
+//     selectbox.options.add(optn);
+// }
+
+</script>
+</html>
