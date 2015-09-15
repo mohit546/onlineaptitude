@@ -4,7 +4,17 @@ angular.module('TrackingApp.controllers',[])
 
 
 })
-.controller('DeviceCtrl', function($log,$scope,networkCallService){
-	console.log("DeviceCtrl loaded...");
 
+.controller('fillQuestionCtrl', function($log,$scope,networkCallService){
+	console.log("fillQuestionCtrl loaded...");
+
+
+})
+
+.controller('testCategoriesCtrl', function($log,$scope,networkCallService,$state){
+	console.log("testCategoriesCtrl loaded...");
+
+		$scope.fillQuestionOption = function(){
+			$state.go('fillQuestions');
+		};
 });
