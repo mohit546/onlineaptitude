@@ -1,12 +1,13 @@
     <style type="text/css">
 		.mainList {
 			color:#5EAC1A;
+			list-style: none;
 		}
 		.subList {
 			color:#269BC6;
 		}
     </style>
-<div class="container">
+<!-- <div class="container">
 <div class="row">
 	<div class="col-sm-4">
 		<ul class="mainList">
@@ -110,5 +111,65 @@
 		<button class="btn btn-warning form-control" style="width:50%;" ng-click="fillQuestionOption();">Submit</button>
 	</div>
 </div>
+</div> -->
+<div id="row">
+	<div class="col-sm-4">
+		<div class="row">
+			<div class="col-sm-12" ng-repeat = "maincat in obj" ng-if="$index%3==0">
+				<ul class="mainList">
+					<li>{{maincat.maincategory}}</li>
+					<ol ng-repeat = "subcat in maincat.subcategory" type="a" class="subList">
+						<input type="checkbox" ng-model="checkBoxValue" ng-click="selectedOption(subcat.category,checkBoxValue);">{{subcat.category}}<br/>
+					</ol>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-4">
+		<div class="row">
+			<div class="col-sm-12" ng-repeat = "maincat in obj" ng-if="$index%3==1">
+				<ul class="mainList">
+					<li>{{maincat.maincategory}}</li>
+					<ol ng-repeat = "subcat in maincat.subcategory" type="a" class="subList">
+						<input type="checkbox" ng-model="checkBoxValue" ng-click="selectedOption(subcat.category,checkBoxValue);">{{subcat.category}}<br/>
+					</ol>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-4">
+		<div class="row">
+			<div class="col-sm-12" ng-repeat = "maincat in obj" ng-if="$index%3==2">
+				<ul class="mainList">
+					<li>{{maincat.maincategory}}</li>
+					<ol ng-repeat = "subcat in maincat.subcategory" type="a" class="subList">
+						<input type="checkbox" ng-model="checkBoxValue" ng-click="selectedOption(subcat.category,checkBoxValue);">{{subcat.category}}<br/>
+					</ol>
+				</ul>
+			</div>
+		</div>
+	</div>
 </div>
+
+<!-- <ul ng-repeat = "maincat in obj" class="mainList">
+			<li>{{maincat.maincategory}}</li>
+			<ol ng-repeat = "subcat in maincat.subcategory" type="a" class="subList">
+				<input type="checkbox">{{subcat.category}}<br/>
+			</ol>
+</ul> -->
+		<!-- </div>
+	</div> -->
+<div class="row">
+	<div class="col-sm-4 col-sm-offset-4">
+		<button class="btn btn-warning form-control" ng-click="sendList();">Submit</button>
+	</div>
+</div>
+
+
+<!-- <ul ng-repeat = "maincat in obj">
+	<li>{{maincat.maincategory}}</li>
+	<ul ng-repeat = "subcat in maincat.subcategory">
+	<li>{{subcat.category}}</li>
+	</ul>
+</ul> -->
 
